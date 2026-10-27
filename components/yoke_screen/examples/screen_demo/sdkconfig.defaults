@@ -1,0 +1,6 @@
+# RootMaker development board (ESP32-S3).
+CONFIG_IDF_TARGET="esp32s3"
+CONFIG_ESPTOOLPY_FLASHSIZE_16MB=y
+# The screen allocates its LVGL draw buffers in PSRAM by default.
+CONFIG_SPIRAM=y
+CONFIG_SPIRAM_SPEED_80M=y

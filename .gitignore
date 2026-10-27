@@ -1,0 +1,27 @@
+# ESP-IDF generated build output and downloaded dependencies
+build/
+managed_components/
+sdkconfig
+sdkconfig.old
+dependencies.lock
+
+# Local editor and assistant settings
+.vscode/
+.claude/
+.codex/
+.agents/
+.aws/
+
+# Runtime logs and language caches
+log.*.txt
+*.log
+__pycache__/
+*.py[cod]
+.DS_Store
+
+# Local validation code is maintained outside this repository
+/tests/
+
+# Local formatting settings and reference documents
+.clang-format
+/docs/

@@ -1,0 +1,13 @@
+version: "1.0.0"
+description: RootMaker development board interface ports and I2C bus pool for ESP-IDF
+url: "https://github.com/Ryzobee/ryzobee-idf-components"
+repository: "https://github.com/Ryzobee/ryzobee-idf-components.git"
+repository_info:
+  path: "components/rootmaker_utils"
+license: "MIT"
+maintainers:
+  - "LiangXiaoWei123"
+issues: "https://github.com/Ryzobee/ryzobee-idf-components/issues"
+dependencies:
+  idf:
+    version: ">=5.3"

@@ -1,0 +1,16 @@
+version: "1.0.0"
+description: Yoke-EC11 I2C encoder, button and onboard WS2812 LED driver for the RootMaker development board
+url: "https://github.com/Ryzobee/ryzobee-idf-components"
+repository: "https://github.com/Ryzobee/ryzobee-idf-components.git"
+repository_info:
+  path: "components/yoke_ec11"
+license: "MIT"
+maintainers:
+  - "LiangXiaoWei123"
+issues: "https://github.com/Ryzobee/ryzobee-idf-components/issues"
+dependencies:
+  idf:
+    version: ">=5.5.3"
+  ryzobeezero/rootmaker_utils:
+    version: "^1.0.0"
+    require: public

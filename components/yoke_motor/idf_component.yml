@@ -1,0 +1,18 @@
+version: "1.0.0"
+description: Yoke-motor brushed DC motor driver (MCPWM) for the RootMaker development board
+url: "https://github.com/Ryzobee/ryzobee-idf-components"
+repository: "https://github.com/Ryzobee/ryzobee-idf-components.git"
+repository_info:
+  path: "components/yoke_motor"
+license: "MIT AND Apache-2.0"
+maintainers:
+  - "LiangXiaoWei123"
+issues: "https://github.com/Ryzobee/ryzobee-idf-components/issues"
+dependencies:
+  idf:
+    version: ">=5.3"
+  espressif/bdc_motor:
+    version: "^0.2.1"
+  ryzobeezero/rootmaker_utils:
+    version: "^1.0.0"
+    require: public

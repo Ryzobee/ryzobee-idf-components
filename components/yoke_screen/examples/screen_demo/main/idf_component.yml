@@ -1,0 +1,9 @@
+dependencies:
+  idf:
+    version: ">=5.3"
+  ryzobeezero/yoke_screen:
+    version: "^1.0.0"
+  espressif/esp_lvgl_port:
+    version: "^2.7.0"
+  lvgl/lvgl:
+    version: "^9.4.0"

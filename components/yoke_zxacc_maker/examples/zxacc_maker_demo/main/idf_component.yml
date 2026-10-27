@@ -1,0 +1,5 @@
+dependencies:
+  idf:
+    version: ">=5.3"
+  ryzobeezero/yoke_zxacc_maker:
+    version: "^1.0.0"

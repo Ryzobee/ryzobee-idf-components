@@ -1,0 +1,5 @@
+dependencies:
+  idf:
+    version: ">=5.5.3"
+  ryzobeezero/yoke_ec11:
+    version: "^1.0.0"
