@@ -8,10 +8,9 @@ independently to the [ESP Component Registry](https://components.espressif.com/)
 The root-level `main` directory contains an LVGL-based touchscreen integration
 demo for testing the peripheral components.
 
-The component manifests currently omit `targets`; the board name is documented
-in `description` and each component README. Without `targets`, Component Manager
-does not filter dependencies by chip. This library remains dedicated to the
-RootMaker development board.
+The `yoke_voice` manifest declares the ESP32-S3 target. Other component manifests
+currently omit `targets`; their board requirements are documented in each README.
+This library remains dedicated to the RootMaker development board.
 
 ## Components
 
@@ -25,6 +24,7 @@ RootMaker development board.
 | [`yoke_rad60`](components/yoke_rad60/README.md) | RAD60 UART radar module | `ryzobeezero/yoke_rad60` |
 | [`yoke_screen`](components/yoke_screen/README.md) | ST7789 display, CST816T touch controller, and LVGL | `ryzobeezero/yoke_screen` |
 | [`yoke_zxacc_maker`](components/yoke_zxacc_maker/README.md) | ZXACC-maker PY32 power-management baseboard | `ryzobeezero/yoke_zxacc_maker` |
+| [`yoke_voice`](components/yoke_voice/README.md) | CI1302 UART audio IO, playback and recording through ESP-GMF | `ryzobeezero/yoke_voice` |
 
 Each component follows this directory structure:
 
@@ -92,7 +92,7 @@ For API usage, see each component's README.
 
 `.github/workflows/upload-components.yml` uses
 [`espressif/upload-components-ci-action`](https://github.com/espressif/upload-components-ci-action)
-to upload all eight components from [`Ryzobee/ryzobee-idf-components`](https://github.com/Ryzobee/ryzobee-idf-components)
+to upload all nine components from [`Ryzobee/ryzobee-idf-components`](https://github.com/Ryzobee/ryzobee-idf-components)
 to the `ryzobeezero` namespace:
 
 1. Update `version` in the relevant component's `idf_component.yml` using
@@ -112,7 +112,7 @@ to the `ryzobeezero` namespace:
 Before the first release from this repository, sign in to
 [components.espressif.com](https://components.espressif.com/) and open
 **Permissions → ryzobeezero → each component → Trusted Uploaders**. Add
-`Ryzobee/ryzobee-idf-components` as the trusted repository for all eight components (create any
+`Ryzobee/ryzobee-idf-components` as the trusted repository for all nine components (create any
 missing component entries first). The workflow uses GitHub OIDC with
 `id-token: write`; no API-token secret is required. For the tag-based release
 workflow, leave the optional Branch and Environment restrictions unset.

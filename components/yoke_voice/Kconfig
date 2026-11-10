@@ -1,0 +1,17 @@
+menu "Yoke Voice"
+config YOKE_VOICE_RUNTIME
+    bool "GMF runtime support"
+    default y
+config YOKE_VOICE_PLAYER
+    bool "Convenient asynchronous player"
+    depends on YOKE_VOICE_RUNTIME
+    default y
+config YOKE_VOICE_HTTP
+    bool "HTTP IO support"
+    depends on YOKE_VOICE_RUNTIME
+    default y
+config YOKE_VOICE_NETWORK_HELPER
+    bool "Optional default Wi-Fi STA and SNTP helper"
+    depends on YOKE_VOICE_HTTP
+    default y
+endmenu

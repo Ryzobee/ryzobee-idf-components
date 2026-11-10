@@ -1,0 +1,20 @@
+{
+  "schema_version": 2,
+  "target": "esp32s3",
+  "variants": {
+    "idf5": {
+      "idf_version": "5.5.1",
+      "libc": "newlib",
+      "archive": "lib/esp32s3/idf5/libci1302_protocol.a",
+      "metadata": "lib/esp32s3/idf5/build_info.json",
+      "archive_sha256": "37f030a7d7fd433e2af79d86f603e44cdbc666848ef718f4bc3f47c322861db6"
+    },
+    "idf6": {
+      "idf_version": "6.2.0",
+      "libc": "newlib",
+      "archive": "lib/esp32s3/idf6/libci1302_protocol.a",
+      "metadata": "lib/esp32s3/idf6/build_info.json",
+      "archive_sha256": "c84c7ef58befd72a7d4350e2b92de596763d41a56494782191728f722b8bb54e"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "target": "esp32s3",
+  "idf_series": "idf5",
+  "idf_version": "5.5.1",
+  "idf_revision": "fcae32885b0296b32044cb99ecbdc50d98dddb83",
+  "idf_development": false,
+  "libc": "newlib",
+  "uart_isr_in_iram": true,
+  "optimization": "size",
+  "c_standard": "gnu17 for legacy task-entry files",
+  "source_revision": "74ac336291a1fc487ecb1b43db4140e693b204e1",
+  "source_sha256": {
+    "CMakeLists.txt": "831b43bf1f0ee4de77519ac95d908ecda22c3e35d857da3308676597752a7635",
+    "ci1302.c": "08942bb278cec3ca0a2b175e3a2645528754cfa99e2cde1e9c8ea89f982bda88",
+    "ci1302_asr_ota.c": "ff22826daef82925d8c5ef147d7313f5abb370d92789061948d7b5f096661ee9",
+    "ci1302_ota_uart.c": "08982fea0ba2b665061a3d0494add8b68fafb979595bf8d9276d953c759d35cb",
+    "ci1302_ota_uart_base.c": "9af98f0fbd3a99bb8b501e573368b544768b433189f940f2967a5a8f234e5b88",
+    "ci1302_protocol.c": "4ee12aced6edd574197e8d37612a5cf55396a856f2f33bb16838f68d324473de",
+    "ci1302_task.h": "4114ef39e77c186abec2060633261211ba3be8ca268e402b57306bc97fa9f466",
+    "include/ci1302.h": "09204e492cd9ab69f837bf1e61ac6cc67aee31d4efdf97e0abc32c27664b60a3",
+    "include/ci1302_asr_ota.h": "84f5b951b286c618855a2d762c851a7db49d60f3129d776c56c317b289529516",
+    "include/ci1302_ota_uart.h": "80722ebdd419d029ff916c03b8468f1ecb1ecbe80426e809b8e09f44838394dc",
+    "include/ci1302_ota_uart_base.h": "5d630d4f701193010e6fb3e9f6996ae82f5edf1ea1032db77ddf63602d1bd4ab",
+    "include/ci1302_protocol.h": "d6c6f738bad8a8738ad7f0497b1332b7294f5a7461ed3834b308d4bf90f0346e"
+  },
+  "compiler": "xtensa-esp-elf-gcc (crosstool-NG esp-14.2.0_20241119) 14.2.0",
+  "sdkconfig_sha256": "50d097a9393613fa0c787677511ce18b343b0dd6d9b3c98ab27516476b89ec6a",
+  "archive_sha256": "37f030a7d7fd433e2af79d86f603e44cdbc666848ef718f4bc3f47c322861db6",
+  "debug_symbols": false
+}

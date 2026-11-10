@@ -3,7 +3,7 @@ name: Upload Yoke Components
 # Publishes from Ryzobee/ryzobee-idf-components using GitHub OIDC. Configure this repository
 # as a Trusted Uploader for each component in the ryzobeezero namespace.
 
-# Push any version tag (e.g. `v1.0.0`) to publish all eight components to
+# Push any version tag (e.g. `v1.0.0`) to publish all nine components to
 # the ESP Component Registry. Each component's version is read from its own
 # `idf_component.yml`; versions that already exist in the registry are skipped,
 # so a single tag can release only the components whose manifest version was
@@ -36,3 +36,4 @@ jobs:
             yoke_rad60: components/yoke_rad60
             yoke_screen: components/yoke_screen
             yoke_zxacc_maker: components/yoke_zxacc_maker
+            yoke_voice: components/yoke_voice

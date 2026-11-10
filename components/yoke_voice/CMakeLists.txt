@@ -1,0 +1,38 @@
+set(srcs src/device/ci1302_device.c src/io/esp_gmf_io_ci1302.c)
+set(public_reqs gmf_core)
+set(private_reqs esp_driver_uart esp_driver_gpio esp_timer
+    mbedtls esp_http_client esp_wifi esp_netif esp_event nvs_flash lwip)
+if(CONFIG_YOKE_VOICE_RUNTIME)
+    list(APPEND public_reqs gmf_audio gmf_io)
+    list(APPEND private_reqs gmf_loader esp_audio_codec esp_muxer)
+    list(APPEND srcs src/runtime/gmf_ci1302_runtime.c src/runtime/gmf_ci1302_runner.c
+        src/support/wav_writer.c src/support/record_files.c)
+endif()
+if(CONFIG_YOKE_VOICE_PLAYER)
+    list(APPEND srcs src/player/gmf_ci1302_player.c src/player/player_play_file.c
+        src/player/player_record_wav.c src/player/player_record_muxer.c)
+    if(CONFIG_YOKE_VOICE_HTTP)
+        list(APPEND srcs src/player/player_play_http.c)
+    endif()
+endif()
+if(CONFIG_YOKE_VOICE_HTTP)
+    list(APPEND srcs src/support/network_status.c)
+endif()
+if(CONFIG_YOKE_VOICE_NETWORK_HELPER)
+    list(APPEND srcs src/support/network_helper.c)
+endif()
+idf_component_register(SRCS ${srcs} INCLUDE_DIRS include
+    PRIV_INCLUDE_DIRS src/device src/runtime src/player ci1302_protocol/include
+    REQUIRES ${public_reqs} PRIV_REQUIRES ${private_reqs})
+include("${CMAKE_CURRENT_LIST_DIR}/cmake/select_protocol.cmake")
+gmf_ci1302_select_protocol("${CMAKE_CURRENT_LIST_DIR}" protocol_archive protocol_build_version)
+message(STATUS "CI1302: IDF ${IDF_VERSION_MAJOR}.${IDF_VERSION_MINOR}.${IDF_VERSION_PATCH} selects ${protocol_archive} (built with IDF ${protocol_build_version})")
+if(IDF_VERSION_MAJOR GREATER_EQUAL 6 AND NOT CONFIG_LIBC_NEWLIB)
+    message(FATAL_ERROR "The IDF 6 CI1302 archive requires CONFIG_LIBC_NEWLIB=y")
+endif()
+if(NOT CONFIG_UART_ISR_IN_IRAM)
+    message(FATAL_ERROR "CI1302 archives require CONFIG_UART_ISR_IN_IRAM=y")
+endif()
+add_prebuilt_library(ci1302_protocol_binary "${protocol_archive}"
+    PRIV_REQUIRES esp_driver_uart esp_driver_gpio esp_timer)
+target_link_libraries(${COMPONENT_LIB} PRIVATE ci1302_protocol_binary)

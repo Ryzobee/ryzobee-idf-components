@@ -1,0 +1,29 @@
+version: 0.2.0
+description: Yoke Voice audio IO and player for ESP32-S3, CI1302 and ESP-GMF
+dependencies:
+  idf: '>=5.5.3,<7.0'
+  espressif/gmf_core: ==1.1.0
+  espressif/gmf_io:
+    version: ==1.1.0
+    matches:
+    - if: $CONFIG{YOKE_VOICE_RUNTIME} == True
+    require: public
+  espressif/gmf_audio:
+    version: ==1.1.0
+    matches:
+    - if: $CONFIG{YOKE_VOICE_RUNTIME} == True
+    require: public
+  espressif/gmf_loader:
+    version: ==1.1.1
+    matches:
+    - if: $CONFIG{YOKE_VOICE_RUNTIME} == True
+    require: private
+url: https://github.com/Ryzobee/ryzobee-idf-components
+repository: https://github.com/Ryzobee/ryzobee-idf-components.git
+repository_info:
+  path: components/yoke_voice
+issues: https://github.com/Ryzobee/ryzobee-idf-components/issues
+maintainers:
+- LiangXiaoWei123
+targets:
+- esp32s3

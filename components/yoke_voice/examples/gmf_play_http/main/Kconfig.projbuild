@@ -1,0 +1,5 @@
+menu "GMF HTTP example"
+config ROOTMAKER_HTTP_URL
+    string "HTTP/HTTPS MP3 URL"
+    default "https://dl.espressif.com/dl/audio/gs-16b-2c-44100hz.mp3"
+endmenu

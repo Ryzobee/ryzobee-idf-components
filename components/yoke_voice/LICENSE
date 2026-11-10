@@ -1,0 +1,18 @@
+License notices
+
+Source files retain their original copyright and SPDX license notices.
+Apache-2.0 text is included in LICENSES/Apache-2.0.txt. CC0-1.0 example
+application files retain their SPDX notices. This packaging does not assign
+a new project-wide license to previously unlicensed source files.
+
+CI1302 protocol binary permission
+
+Permission is granted to use the CI1302 protocol binary archives supplied
+with this component, including linking them into applications and
+distributing the resulting firmware in binary form. Preserve the copyright
+and license notices supplied with the component.
+
+The protocol implementation remains proprietary. Its source code is not
+provided, and this permission does not license undistributed protocol
+implementation source code. Other source files retain their original
+licenses as described above.

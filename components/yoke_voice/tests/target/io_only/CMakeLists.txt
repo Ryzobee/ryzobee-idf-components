@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.16)
+get_filename_component(YOKE_VOICE_COMPONENT_DIR "${CMAKE_CURRENT_LIST_DIR}/../../.." ABSOLUTE)
+list(APPEND EXTRA_COMPONENT_DIRS "${YOKE_VOICE_COMPONENT_DIR}")
+include("${YOKE_VOICE_COMPONENT_DIR}/cmake/example_defaults.cmake")
+include($ENV{IDF_PATH}/tools/cmake/project.cmake)
+idf_build_set_property(MINIMAL_BUILD ON)
+project(ci1302_io_only)

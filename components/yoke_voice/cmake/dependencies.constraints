@@ -1,0 +1,26 @@
+# Validated baseline dependency versions
+espressif/cjson==1.7.19~2
+espressif/cmake_utilities==0.5.3
+espressif/dl_fft==0.8.0
+espressif/esp-dl==3.3.14
+espressif/esp-sr==2.5.5
+espressif/esp_asrc==1.1.0
+espressif/esp_audio_codec==2.6.2
+espressif/esp_audio_effects==1.4.4
+espressif/esp_codec_dev==2.0.0-beta5
+espressif/esp_h264==1.4.1
+espressif/esp_image_effects==1.2.0
+espressif/esp_muxer==1.2.3
+espressif/esp_new_jpeg==1.0.2
+espressif/esp_video_codec==0.5.7
+espressif/gmf_ai_audio==1.1.1
+espressif/gmf_audio==1.1.0
+espressif/gmf_core==1.1.0
+espressif/gmf_fft==1.1.0
+espressif/gmf_io==1.1.0
+espressif/gmf_loader==1.1.1
+espressif/gmf_misc==1.1.0
+espressif/gmf_video==1.1.1
+espressif/usb==1.6.0
+espressif/usb_host_uac==1.5.0
+joltwallet/littlefs==1.23.1

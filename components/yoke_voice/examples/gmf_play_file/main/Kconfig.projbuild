@@ -1,0 +1,11 @@
+menu "GMF Audio Examples"
+    config ROOTMAKER_HTTP_URL
+        string "HTTP/HTTPS MP3 URL"
+        default "https://dl.espressif.com/dl/audio/gs-16b-2c-44100hz.mp3"
+    config ROOTMAKER_MUXER_SLICE_MS
+        int "Muxer recording slice duration (ms)"
+        range 1000 60000
+        default 60000
+        help
+            WAV file segmentation duration. Set 5000 to split a 10-second recording.
+endmenu
