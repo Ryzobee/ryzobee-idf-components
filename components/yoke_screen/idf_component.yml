@@ -1,4 +1,4 @@
-version: "1.0.0"
+version: "1.0.1"
 description: Yoke-Screen ST7789 display and CST816T touch driver with LVGL for the RootMaker development board
 url: "https://github.com/Ryzobee/ryzobee-idf-components"
 repository: "https://github.com/Ryzobee/ryzobee-idf-components.git"

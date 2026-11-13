@@ -20,6 +20,12 @@
 * Include MIT/Apache-2.0 license texts, source change notices and attribution.
 * Clarify SPI versus PWM, LVGL ownership and image/canvas buffer lifetime.
 
+## 1.0.1 - 2026-11-13
+
+### Changed
+
+* Reduce the SPI bus max_transfer_sz setting from 64 KiB to 8 * 1024 - 1 bytes, keeping the transaction queue depth at 3 and the full-screen PSRAM double buffers.
+
 ## 1.0.0 - 2026-08-04
 
 ### Added
