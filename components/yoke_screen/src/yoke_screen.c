@@ -201,7 +201,7 @@ static esp_err_t app_lcd_init(void) {
         .miso_io_num = GPIO_NUM_NC,
         .quadwp_io_num = GPIO_NUM_NC,
         .quadhd_io_num = GPIO_NUM_NC,
-        .max_transfer_sz = 64 * 1024,
+        .max_transfer_sz = 8 * 1024 - 1,
     };
     ESP_GOTO_ON_ERROR(spi_bus_initialize(LCD_SPI_NUM, &buscfg, SPI_DMA_CH_AUTO), err, TAG, "SPI init failed");
     lcd_spi_initialized = true;
